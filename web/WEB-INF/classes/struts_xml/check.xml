@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-check" extends="micrite-default" namespace="/check">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ Check ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+        
+        <action name="findEnterpriseByHege" class="checkAction" method="findEnterpriseByHege">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result type="json" name="input">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="saveCheck" class="checkAction" method="saveCheck">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result type="json" name="input">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findCheck" class="checkAction" method="advancedFind">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findRecentPostCheck" class="checkAction" method="findRecentPostCheck">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<!--action name="updateCheck" class="checkAction" method="update">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action-->
+	
+		<action name="addCheck" class="checkAction" method="addCheck">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+           <result type="json" name="input">
+                <param name="root">resultMap</param>
+            </result>
+            
+		</action>
+		
+		<action name="deleteCheck" class="checkAction" method="delete">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<!--action name="findCheckByDateSpacing" class="checkAction" method="findByDateSpacing">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>   
+	
+		<action name="getCarfilePartner7" class="checkAction" method="getPartner7">
+			<result type="json">
+                <param name="root">paiSe</param>
+            </result>
+		</action-->	
+			
+		<action name="printCheck" class="checkAction" method="print">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+	</package>
+
+</struts>

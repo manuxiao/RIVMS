@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-history" extends="micrite-default" namespace="/history">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ Check ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->  
+		<action name="findHistoryCheck" class="historyAction" method="findHistoryCheck">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findHistoryCarfile" class="historyAction" method="findHistoryCarfile">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findHistoryEnterprise" class="historyAction" method="findHistoryEnterprise">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="findHistoryStandard" class="historyAction" method="findHistoryStandard">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findHistoryCarowner" class="historyAction" method="findHistoryCarowner">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>		
+		<action name="findStandardSingle" class="historyAction" method="findStandardSingle">
+            <result type="json">
+                <param name="root">resultMap</param>
+                <param name="excludeProperties">data\[\d+\]\.createrId,data\[\d+\]\.createDate,
+                data\[\d+\]\.enterprise\.legalPerson,data\[\d+\]\.enterprise\.license,
+                data\[\d+\]\.enterprise\.telephone1,data\[\d+\]\.enterprise\.telephone2,data\[\d+\]\.enterprise\.telephone3,data\[\d+\]\.enterprise\.telephone4,
+                data\[\d+\]\.enterprise\.createDate,data\[\d+\]\.enterprise\.createrId,data\[\d+\]\.enterprise\.editDate,data\[\d+\]\.enterprise\.editorId,
+                data\[\d+\]\.enterprise\.dateBegin,data\[\d+\]\.enterprise\.dateEnd,data\[\d+\]\.enterprise\.licenseDate,data\[\d+\]\.enterprise\.py,data\[\d+\]\.enterprise\.status,
+                data\[\d+\]\.enterprise\.handleMan,data\[\d+\]\.enterprise\.commission,data\[\d+\]\.enterprise\.address,data\[\d+\]\.enterprise\.workArea,data\[\d+\]\.enterprise\.workRemark,
+                data\[\d+\]\.enterprise\.workType\.*,data\[\d+\]\.enterprise\.station\.*,data\[\d+\]\.enterprise\.kind\.*,data\[\d+\]\.enterprise\.qualification\.*
+                </param>
+                <!--param name="includeProperties">data\[\d+\]\.enterprise\.unitName</param-->
+            </result>
+		</action>
+		
+	</package>
+</struts>

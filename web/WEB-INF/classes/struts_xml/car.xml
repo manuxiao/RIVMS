@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-car" extends="micrite-default" namespace="/car">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ Carfile ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+        <action name="getCar" class="carfileAction" method="getCar">
+            <result type="json">
+                <param name="root">carfile</param>
+            </result>
+		</action>
+        <action name="getWillExpired" class="carfileAction" method="getWillExpired">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result name="downloadall" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param> 
+				<param name="inputName">downloadStream</param>
+				<param name="bufferSize">5000000</param>
+			</result>
+		</action>
+		<action name="updateGH" class="carfileAction" method="updateGH">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="updateZJ" class="carfileAction" method="updateZJ">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="updateZX" class="carfileAction" method="updateZX">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="checkCarExists" class="carfileAction" method="checkCarExists">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+        <action name="getNotepad" class="carfileAction" method="getNotepadOfCar">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="ridofPunish" class="carfileAction" method="ridofPunishment">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="exemptPunish" class="carfileAction" method="exemptPunishment">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+        <action name="getPrintIndex" class="carfileAction" method="getPrintIndex">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="saveCarfile" class="carfileAction" method="saveCar">
+			<!--interceptor-ref name="json"/-->
+            <result type="json"><!-- interceptor-ref name="store" --> 
+                <param name="root">resultMap</param>
+            </result>	   
+		</action>
+	
+		<action name="findCarfile" class="carfileAction" method="advancedFind">
+            <result name="success" type="json">
+                <param name="root">resultMap</param>
+				<param name="excludeProperties">\.*hibernateLazyInitializer,
+                data\[\d+\]\.createDate,data\[\d+\]\.createrId,
+                data\[\d+\]\.editorId,data\[\d+\]\.printIndex1,data\[\d+\]\.printIndex2,
+                data\[\d+\]\.carType\.type,data\[\d+\]\.carType\.value,
+                data\[\d+\]\.evaluateCycle\.type,data\[\d+\]\.evaluateCycle\.value,
+                data\[\d+\]\.fuelRank\.type,data\[\d+\]\.fuelRank\.value,
+                data\[\d+\]\.maintainCycle\.type,data\[\d+\]\.maintainCycle\.value,
+                data\[\d+\]\.paiSe\.type,data\[\d+\]\.paiSe\.value,
+                data\[\d+\]\.skillRank\.type,data\[\d+\]\.skillRank\.value
+				</param>
+            </result>
+            <result name="downloadall" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param> 
+				<param name="inputName">downloadStream</param>
+				<param name="bufferSize">5000000</param>
+			</result>
+		</action>
+		<action name="findCarfileByDateSpacing" class="carfileAction" method="findByDateSpacing">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="findCarfileBySkill" class="carfileAction" method="findCarfileBySkill">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result name="downloadall" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param> 
+				<param name="inputName">downloadStream</param>
+				<param name="bufferSize">5000000</param>
+			</result>
+		</action>
+		<action name="updateCarfile" class="carfileAction" method="update">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="deleteCarfile" class="carfileAction" method="delete">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="saveNotepad" class="carfileAction" method="saveNotepad">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result type="json" name="input">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+        <action name="getCarTypeBarChart" class="carfileChartAction" method="getBarChart" >
+           <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        <action name="getCarTypePieChart" class="carfileChartAction" method="getPieChart" >
+             <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        <action name="getCarTypeLineChart" class="carfileChartAction" method="getLineChart" >
+             <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        
+        <action name="getCheckByCar" class="carfileAction" method="getCheckByCar">
+            <result type="json">
+                <param name="root">resultMap</param>
+		  </result>
+        </action>   
+</package>
+
+	<package name="micrite-print" extends="micrite-default" namespace="/print">
+
+        <action name="print1" class="printAction" method="print1">
+            <result type="json">
+                <param name="root">resultMap</param>
+		  </result>
+        </action> 
+        
+        <action name="print2" class="printAction" method="print2">
+            <result type="json">
+                <param name="root">resultMap</param>
+		  </result>
+        </action> 
+    </package>
+</struts>

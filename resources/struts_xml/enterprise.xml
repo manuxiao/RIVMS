@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-enterprise" extends="micrite-default" namespace="/enterprise">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ Enterprise ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+        <action name="getEntity" class="enterpriseAction" method="getEntity">
+            <result type="json">
+                <param name="root">enterprise</param>
+            </result>
+		</action>
+		<action name="checkEnterpriseExists" class="enterpriseAction" method="checkEnterpriseExists">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="saveEnterprise" class="enterpriseAction" method="add">
+			<!--interceptor-ref name="json"/-->
+            <result type="json"><!-- interceptor-ref name="store" --> 
+                <param name="root">resultMap</param>
+            </result>         
+		</action>
+		<action name="findEnterpriseByPy" class="enterpriseAction" method="findEnterpriseByPy">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findEnterprise" class="enterpriseAction" method="advancedFind">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result name="downloadall" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param> 
+				<param name="inputName">downloadStream</param>
+				<param name="bufferSize">5000000</param>
+			</result>
+		</action>
+		<action name="findEnterpriseByDateSpacing" class="enterpriseAction" method="findByDateSpacing">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="updateEnterprise" class="enterpriseAction" method="update">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+
+		<action name="deleteEnterprise" class="enterpriseAction" method="delete">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+        <action name="getEnterpriseSourceBarChart" class="enterpriseChartAction" method="getBarChart" >
+           <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        <action name="getEnterpriseSourcePieChart" class="enterpriseChartAction" method="getPieChart" >
+             <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        <action name="getEnterpriseSourceLineChart" class="enterpriseChartAction" method="getLineChart" >
+             <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>        
+	</package>
+</struts>

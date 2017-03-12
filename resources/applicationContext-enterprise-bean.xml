@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="enterpriseDataPrepare" class="org.gaixie.micrite.enterprise.data.EnterpriseDataPrepare" />
+
+    <bean id="enterpriseAction" class="org.gaixie.micrite.enterprise.action.EnterpriseAction" scope="prototype" />
+    <bean id="enterpriseChartAction" class="org.gaixie.micrite.enterprise.action.EnterpriseChartAction" scope="prototype" />    
+	<bean id="enterpriseService" class="org.gaixie.micrite.enterprise.service.impl.EnterpriseServiceImpl" />
+    <bean id="enterpriseDataPrepareService" class="org.gaixie.micrite.enterprise.service.impl.EnterpriseDataPrepareServiceImpl" />
+
+	<bean id="enterpriseDAO" class="org.gaixie.micrite.enterprise.dao.hibernate.EnterpriseDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+</beans>

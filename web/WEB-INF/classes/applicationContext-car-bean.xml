@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    <bean id="carfileAction" class="org.gaixie.micrite.car.action.CarfileAction" scope="prototype" />
+    <bean id="carfileChartAction" class="org.gaixie.micrite.car.action.CarfileChartAction" scope="prototype" />    
+	<bean id="carfileService" class="org.gaixie.micrite.car.service.impl.CarfileServiceImpl" />
+ 
+	<bean id="carfileDAO" class="org.gaixie.micrite.car.dao.hibernate.CarfileDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    <bean id="dictionaryDAO" class="org.gaixie.micrite.dic.dao.hibernate.DictionaryDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>    
+</beans>

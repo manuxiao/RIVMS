@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-standard" extends="micrite-default" namespace="/standard">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ CUSTOMER ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+        
+		<action name="remainStatistics" class="standardAction" method="remainStatistics">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="saveStandard" class="standardAction" method="add">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findStandard" class="standardAction" method="advancedFind">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="findStandardByQuery" class="standardAction" method="findStandardByQuery">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+				
+		<action name="deleteStandard" class="standardAction" method="delete">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findStandardByDateSpacing" class="standardAction" method="findByDateSpacing">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="findStandardByShorthand" class="standardAction" method="findByShorthand">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="editStandard" class="standardAction" method="update">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		        
+	</package>
+</struts>

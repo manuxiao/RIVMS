@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="standardDataPrepare" class="org.gaixie.micrite.standard.data.StandardDataPrepare" />
+   	<bean id="standardAction" class="org.gaixie.micrite.standard.action.StandardAction" scope="prototype" />
+    <bean id="standardPrepareService" class="org.gaixie.micrite.standard.service.impl.StandardDataPrepareServiceImpl" />
+    <bean id="standardService" class="org.gaixie.micrite.standard.service.impl.StandardServiceImpl" />
+
+	<bean id="standardDAO" class="org.gaixie.micrite.standard.dao.hibernate.StandardDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>   
+     
+   
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+      <bean id="riverDataPrepare" class="org.gaixie.micrite.river.data.RiverDataPrepare" />
+ 
+	<bean id="riverAction" class="org.gaixie.micrite.river.action.RiverAction" scope="prototype" />
+       <bean id="riverPrepareService" class="org.gaixie.micrite.river.service.impl.RiverDataPrepareServiceImpl" />
+  
+	<bean id="riverChartAction" class="org.gaixie.micrite.river.action.RiverChartAction" scope="prototype" />    
+	<bean id="riverService" class="org.gaixie.micrite.river.service.impl.RiverServiceImpl" />
+ 
+
+	<bean id="riverDAO" class="org.gaixie.micrite.river.dao.hibernate.RiverDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+     
+</beans>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-patrolRiverSummary" extends="micrite-default" namespace="/patrolRiverSummary">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ PatrolRiverSummary ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+        <action name="getCar" class="patrolRiverSummaryAction" method="getCar">
+            <result type="json">
+                <param name="root">patrolRiverSummary</param>
+            </result>
+		</action>
+        
+		<action name="ridofPunish" class="patrolRiverSummaryAction" method="ridofPunishment">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="exemptPunish" class="patrolRiverSummaryAction" method="exemptPunishment">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+        <action name="getPrintIndex" class="patrolRiverSummaryAction" method="getPrintIndex">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="savePatrolRiverSummary" class="patrolRiverSummaryAction" method="saveCar">
+			<!--interceptor-ref name="json"/-->
+            <result type="json"><!-- interceptor-ref name="store" --> 
+                <param name="root">resultMap</param>
+            </result>	   
+		</action>
+	
+		<action name="findPatrolRiverSummary" class="patrolRiverSummaryAction" method="advancedFind">
+            <result name="success" type="json">
+                <param name="root">resultMap</param>
+				
+            </result>
+            <result name="downloadall" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param> 
+				<param name="inputName">downloadStream</param>
+				<param name="bufferSize">5000000</param>
+			</result>
+		</action>
+		<action name="findPatrolRiverSummaryByDateSpacing" class="patrolRiverSummaryAction" method="findByDateSpacing">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="updatePatrolRiverSummary" class="patrolRiverSummaryAction" method="update">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="deletePatrolRiverSummary" class="patrolRiverSummaryAction" method="delete">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		 
+        <action name="getCarTypeBarChart" class="patrolRiverSummaryChartAction" method="getBarChart" >
+           <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        <action name="getCarTypePieChart" class="patrolRiverSummaryChartAction" method="getPieChart" >
+             <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        <action name="getCarTypeLineChart" class="patrolRiverSummaryChartAction" method="getLineChart" >
+             <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+        </action>
+        
+</package>
+
+</struts>

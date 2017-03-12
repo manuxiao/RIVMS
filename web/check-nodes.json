@@ -1,0 +1,142 @@
+[{
+    text: '一类机动车维修', 
+    //cls: 'folder',
+    iconCls:'',
+    leaf: false,
+    checked: false,
+    children: [{
+        text: '大中型客车维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '大中型货车维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '小型车辆维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '危险货物运输车辆维修',
+        leaf: true,
+        checked: false
+    }]
+},{
+    text: '二类机动车维修', 
+    //cls: 'folder',
+    leaf: false,
+    checked: false,
+    children: [{
+        text: '大中型客车维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '大中型货车维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '小型车辆维修',
+        leaf: true,
+        checked: false
+    }]
+},{
+    text: '三类机动车维修', 
+    //cls: 'folder',
+    leaf: false,
+    checked: false,
+    children: [{
+        text: '发动机修理',
+        leaf: true,
+        checked: false
+    },{
+        text: '车身维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '电气系统维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '自动变速器维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '车身清洁维护',
+        leaf: true,
+        checked: false
+    },{
+        text: '涂漆',
+        leaf: true,
+        checked: false
+    },{
+        text: '轮胎动平衡及修补',
+        leaf: true,
+        checked: false
+    },{
+        text: '四轮定位检测调整',
+        leaf: true,
+        checked: false
+    },{
+        text: '供油系统维护及油品更换',
+        leaf: true,
+        checked: false
+    },{
+        text: '喷油泵和喷油嘴维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '曲轴修磨',
+        leaf: true,
+        checked: false
+    },{
+        text: '气缸镗磨',
+        leaf: true,
+        checked: false
+    },{
+        text: '散热器（水箱）修理',
+        leaf: true,
+        checked: false
+    },{
+        text: '空调维修',
+        leaf: true,
+        checked: false
+    },{
+        text: '车辆装潢（蓬布、坐垫及内饰）',
+        leaf: true,
+        checked: false
+    },{
+        text: '车辆玻璃安装',
+        leaf: true,
+        checked: false
+    },{
+        text: '汽车音响',
+        leaf: true,
+        checked: false
+    }]
+},{
+    text: '汽车快修',
+    leaf: true,
+    checked: false
+},{
+    text: '摩托车维修',
+    leaf: true,
+    checked: false
+},{
+    text: '机动车维修质量检验经营', 
+    //cls: 'folder',
+    leaf: false,
+    checked: false,
+    children: [{
+        text: '车辆维修竣工质量检测',
+        leaf: true,
+        checked: false
+    },{
+        text: '营运车辆技术状况检测',
+        leaf: true,
+        checked: false
+    },{
+        text: '委托检测',
+        leaf: true,
+        checked: false
+    }]
+}]

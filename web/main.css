@@ -1,0 +1,104 @@
+.main-header .x-panel-body {
+    background:transparent;
+}
+.icon-expand-all {
+    background-image: url(security/images/framework/expand-all.gif) !important;
+}
+.icon-collapse-all {
+    background-image: url(security/images/framework/collapse-all.gif) !important;
+}
+.x-tree-node div.modules-node{
+    background:#eee;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:3px;
+}
+.home {
+    background-image: url(security/images/framework/home.gif) !important;
+}
+.user {
+    background-image: url(security/images/framework/user.gif) !important;
+}
+.exit {
+    background-image: url(security/images/framework/exit.gif) !important;
+}
+#ToolBar {
+position:absolute;
+bottom:0px;
+right:16px;
+width:100%;
+height:20px;
+text-align:center;
+background:#ccc;
+z-index:2;
+overflow:hidden;
+}
+.loginbgimage {
+   background:url(standard/carManager.jpg ) no-repeat left top;
+   height:200px;
+   width:200px;
+}
+.loginbgimage2 {
+   background:url(standard/carRepair.jpg ) no-repeat left top;
+   height:200px;
+   width:200px;
+}
+.ex-panel{border-style:solid;border-color:transparent;border-width:0;}
+.gone-row{text-decoration:line-through;}
+.red-row{ background-color: #F5C0C0;}
+.yellow-row{ background-color: yellow;}
+.green-row{ background-color: #C0F5C0;}
+.white-row{ background-color: white;} 
+.gray-row{ background-color: #dcdcdc;}
+.red-row-dengji{ background-color: #F5C0C0; font-weight:bold;}
+.white-row-dengji{ background-color: white; font-weight:bold;}
+.icon_m2010_user {
+    background-image: url(images/user.gif) !important;
+}
+.icon_m2010_auth {
+    background-image: url(images/auth.png) !important;
+}
+.icon_m2010_role {
+    background-image: url(images/role.png) !important;
+}
+.icon_m2010_owner {
+    background-image: url(images/owner.png) !important;
+}
+.icon_m2010_car {
+    background-image: url(images/car.png) !important;
+}
+.icon_m2010_ent {
+    background-image: url(images/ent.png) !important;
+}
+.icon_m2010_ownerhis {
+    background-image: url(images/ownerhis.png) !important;
+}
+.icon_m2010_carhis {
+    background-image: url(images/carhis.png) !important;
+}
+.icon_m2010_enthis {
+    background-image: url(images/enthis.png) !important;
+}
+.icon_m2010_sta {
+    background-image: url(images/sta.png) !important;
+}
+.icon_m2010_upl {
+    background-image: url(images/upl.png) !important;
+}
+.icon_m2010_mnt {
+    background-image: url(images/mnt.png) !important;
+}
+.icon_m2010_dic {
+    background-image: url(images/dic.png) !important;
+}
+.icon_m2010_pun {
+    background-image: url(images/pun.png) !important;
+}
+.icon_m2010_xmpt {
+    background-image: url(images/xmpt.png) !important;
+}
+.icon_m2010_chk {
+    background-image: url(images/chk.png) !important;
+}

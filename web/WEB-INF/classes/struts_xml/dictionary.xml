@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="micrite-dic" extends="micrite-default" namespace="/dic">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~ Dictionary ACTION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+        <action name="ewEPDays" class="dictionaryAction" method="erweiExpirePermissionDays">
+            <result type="json">
+                <param name="root">resultMap</param>
+            </result>
+            <result type="json" name="input">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		
+		<action name="getPartner" class="dictionaryAction" method="getPartner">
+			<result type="json">
+                <param name="root">dictionaries</param>
+            </result>
+		</action>
+		
+		<action name="add" class="dictionaryAction" method="add">
+			<result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="edit" class="dictionaryAction" method="edit">
+			<result type="json">
+                <param name="root">resultMap</param>
+            </result>
+		</action>
+		<action name="getListItems" class="dictionaryAction" method="getListItems">
+			<result type="json">
+                <param name="root">dictionaries</param>
+            </result>
+		</action>
+	</package>
+
+</struts>

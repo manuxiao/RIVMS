@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+      <bean id="patrolRiverSummaryDataPrepare" class="org.gaixie.micrite.patrolRiverSummary.data.RiverDataPrepare" />
+ 
+	<bean id="patrolRiverSummaryAction" class="org.gaixie.micrite.patrolRiverSummary.action.PatrolRiverSummaryAction" scope="prototype" />
+       <bean id="patrolRiverSummaryPrepareService" class="org.gaixie.micrite.patrolRiverSummary.service.impl.RiverDataPrepareServiceImpl" />
+  
+	<bean id="patrolRiverSummaryChartAction" class="org.gaixie.micrite.patrolRiverSummary.action.PatrolRiverSummaryChartAction" scope="prototype" />    
+	<bean id="patrolRiverSummaryService" class="org.gaixie.micrite.patrolRiverSummary.service.impl.PatrolRiverSummaryServiceImpl" />
+ 
+
+	<bean id="patrolRiverSummaryDAO" class="org.gaixie.micrite.patrolRiverSummary.dao.hibernate.PatrolRiverSummaryDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+     
+</beans>
